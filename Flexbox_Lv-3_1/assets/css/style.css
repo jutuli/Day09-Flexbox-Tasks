@@ -8,6 +8,8 @@
   --light-gray-opaque: rgb(102, 102, 102, 0.2);
   --dark-gray: #333;
   --light-blue: #337ab7;
+  --primary-purple: #745cf9;
+  --secondary-purple: #553edd;
 }
 
 * {
@@ -18,13 +20,12 @@
 
 html {
   font-family: "Raleway";
-  font-size: 60%;
+  font-size: 63%;
 }
 
 a {
   text-decoration: none;
   padding: 0rem 1rem;
-  color: var(--dark-gray);
 }
 
 li {
@@ -44,6 +45,33 @@ nav ul {
   align-items: center;
 }
 
+nav ul li a {
+  color: var(--dark-gray);
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 200;
+}
+
+article {
+  display: flex;
+  gap: 20px;
+}
+
+article a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 3rem;
+  width: 21rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  box-sizing: border-box;
+  border: 1px solid;
+}
+
 .logo {
   color: var(--light-gray);
   font-size: 2rem;
@@ -55,4 +83,47 @@ nav ul {
 
 a:hover {
   color: var(--light-blue);
+}
+
+.hero {
+  height: calc(100vh - 76px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: url(../img/bg.jpg) no-repeat center/cover;
+}
+
+.hero a {
+  color: white;
+}
+
+.hero-paragraph {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 2rem;
+}
+
+.purple-button {
+  background-color: var(--primary-purple);
+  border-color: var(--primary-purple);
+}
+
+.white-button {
+  border-color: white;
+}
+
+.purple-button:hover {
+  background-color: var(--secondary-purple);
+  border-color: var(--secondary-purple);
+  transition: 0.25s;
+}
+
+.white-button:hover {
+  background-color: white;
+  border-color: white;
+  color: var(--dark-gray);
+  transition: 0.25s;
+  border: none;
 }
